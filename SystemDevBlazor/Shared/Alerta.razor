@@ -1,0 +1,27 @@
+﻿
+@if(@ContentDanger == null && @ContentSucess != null)
+{
+    <div class="alert alert-success" role="alert">
+        <li>@ContentSucess</li>
+    </div>
+} else if(@ContentSucess == null && @ContentDanger != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <li>@ContentDanger</li>
+    </div>
+}else
+{
+    <div class="alert alert-info" role="alert">
+        <li>Erro na passagem de parâmetro RenderFragment!</li>
+    </div>
+}
+
+
+
+
+@code {
+
+    [Parameter] public RenderFragment ContentSucess { get; set; }
+    [Parameter] public RenderFragment ContentDanger { get; set; }
+
+}

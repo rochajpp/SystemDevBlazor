@@ -1,0 +1,91 @@
+﻿@page "/"
+@inject MyDbContext context;
+
+<PageTitle>Index</PageTitle>
+
+<div class="main">
+    
+    <form>
+        <h1>Login</h1>
+        <label>Matrícula</label>
+        <input @bind="@matricula" placeholder="Digite sua matrícula"  />
+        <br />
+        <label>Nome</label>
+        <input @bind="@nome" placeholder="Digite seu nome" />
+        <br />
+        <button @onclick="validarAluno" class="btn btn-primary" type="button">Entrar</button>
+        <br />
+        
+    </form>
+    @if (valM)
+    {
+        @if (valN)
+        {
+            <Alerta>
+                <ContentSucess> Aluno validado com sucesso! </ContentSucess>
+            </Alerta>
+        }
+        else
+        {
+            <Alerta>
+                <ContentDanger> Nome inválido </ContentDanger>
+            </Alerta>
+        }
+    }
+    else if (val)
+    {
+        <Alerta>
+            <ContentDanger> Matrícula Inválida! </ContentDanger>
+        </Alerta>
+    }
+
+ 
+
+</div>
+
+@code{
+
+    public int matricula { get; set; }
+    public string nome { get; set; }
+    public bool valM = false;
+    public bool valN = false;
+    public bool val = false;
+
+
+
+
+    public List<Aluno> alunos;
+
+    protected override void OnInitialized()
+    {
+        alunos = context.Alunos.ToList();
+    }
+
+    public void validarAluno()
+    {
+        valM = false;
+        valN = false;
+        val = false;
+
+        foreach(var aluno in alunos)
+        {
+            if(aluno.Matricula == matricula)
+            {
+                valM = true;
+
+                if(aluno.Nome.ToLower() == nome.ToLower())
+                {
+                    valN = true;
+                    break;
+                }
+                else
+                {
+
+                }
+            }   
+
+        }
+        val = true;
+    }
+
+}
