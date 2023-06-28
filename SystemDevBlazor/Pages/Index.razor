@@ -15,41 +15,44 @@
         <br />
         <button @onclick="validarAluno" class="btn btn-primary" type="button">Entrar</button>
         <br />
-        
+
+
+        @if (valM)
+        {
+            @if (valN)
+            {
+                <Alerta>
+                    <ContentSucess> Aluno validado com sucesso! </ContentSucess>
+                </Alerta>
+            }
+            else
+            {
+                <Alerta>
+                    <ContentDanger> Nome inválido </ContentDanger>
+                </Alerta>
+            }
+        }
+        else if (val)
+        {
+            <Alerta>
+                <ContentDanger> Matrícula Inválida! </ContentDanger>
+            </Alerta>
+        }
     </form>
-    @if (valM)
-    {
-        @if (valN)
-        {
-            <Alerta>
-                <ContentSucess> Aluno validado com sucesso! </ContentSucess>
-            </Alerta>
-        }
-        else
-        {
-            <Alerta>
-                <ContentDanger> Nome inválido </ContentDanger>
-            </Alerta>
-        }
-    }
-    else if (val)
-    {
-        <Alerta>
-            <ContentDanger> Matrícula Inválida! </ContentDanger>
-        </Alerta>
-    }
+
+  
 
  
 
 </div>
 
 @code{
-
     public int matricula { get; set; }
     public string nome { get; set; }
-    public bool valM = false;
-    public bool valN = false;
-    public bool val = false;
+
+    bool valM = false;
+    bool valN = false;
+    bool val = false;
 
 
 
@@ -72,15 +75,21 @@
             if(aluno.Matricula == matricula)
             {
                 valM = true;
+                if (!string.IsNullOrEmpty(nome)) {
 
-                if(aluno.Nome.ToLower() == nome.ToLower())
-                {
-                    valN = true;
-                    break;
+                    if (aluno.Nome.ToLower() == nome.ToLower())
+                    {
+                        valN = true;
+                        break;
+                    }
+                    else
+                    {
+
+                    }
                 }
                 else
                 {
-
+                    return;
                 }
             }   
 
