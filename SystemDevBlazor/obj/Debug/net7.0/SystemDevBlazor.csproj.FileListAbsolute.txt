@@ -58,3 +58,4 @@ C:\Users\joaopaulo.rocha\Documents\SystemDevBlazor\SystemDevBlazor\bin\Debug\net
 C:\Users\joaopaulo.rocha\Documents\SystemDevBlazor\SystemDevBlazor\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\joaopaulo.rocha\Documents\SystemDevBlazor\SystemDevBlazor\obj\Debug\net7.0\SystemDevBlazor.csproj.CopyComplete
 C:\Users\joaopaulo.rocha\Documents\SystemDevBlazor\SystemDevBlazor\obj\Debug\net7.0\scopedcss\Pages\Index.razor.rz.scp.css
+C:\Users\joaopaulo.rocha\Documents\SystemDevBlazor\SystemDevBlazor\obj\Debug\net7.0\scopedcss\Pages\Registrar.razor.rz.scp.css

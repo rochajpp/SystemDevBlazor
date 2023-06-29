@@ -4,12 +4,14 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
-   
 }
-.main form[b-zezy89nk2a]{
+.main form[b-zezy89nk2a] {
     display: flex;
     flex-direction: column;
-    
+    box-shadow: 4px 4px 8px black;
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    background-color: white;
 }
 
 h1[b-zezy89nk2a]{
@@ -17,5 +19,5 @@ h1[b-zezy89nk2a]{
 }
 
 input[b-zezy89nk2a]{
-   padding: 0.5rem 0.5rem;
+   padding: 0.2rem 0.5rem;
 }

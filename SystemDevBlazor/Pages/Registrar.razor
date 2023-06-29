@@ -1,0 +1,119 @@
+﻿@inject MyDbContext context;
+@inject NavigationManager navigation;
+
+@page "/register"
+
+<PageTitle>Registrar</PageTitle>
+
+<div class="main">
+    <form>
+        <h1>Registro</h1>
+        <label>Nome</label>
+        <input type="text" @bind="@nome" />
+        <br />
+        <label>Data de Nascimento</label>
+        <input type="date" @bind="@dataNascimento" />
+        <br />
+        <label>E-mail</label>
+        <input type="email" @bind="@email" />
+        <br />
+
+        <button class="btn btn-primary" type="button" @onclick="AddNewUser">Registrar</button>
+        <br />
+
+        @if (validacaoNome)
+        {
+            <Alerta>
+                <ContentDanger> Nome inválido! </ContentDanger>
+            </Alerta>
+        }
+        @if (validacaoData)
+        {
+            <Alerta>
+                <ContentDanger> Data inválida! </ContentDanger>
+            </Alerta>
+        }
+
+        @if (validacaoEmail)
+        {
+            <Alerta>
+                <ContentDanger>E-mail inválido!</ContentDanger>
+            </Alerta>
+        }
+    </form>
+
+
+</div>
+
+
+
+
+@code {
+
+    public string nome { get; set; }
+    public DateTime dataNascimento { get; set; } = DateTime.Now.Date;
+    public string email { get; set; }
+
+    bool validacaoNome;
+    bool validacaoData;
+    bool validacaoEmail;
+
+
+    public void AddNewUser()
+    {
+        validacaoNome = false;
+        validacaoData = false;
+        validacaoEmail = false;
+
+        if (string.IsNullOrEmpty(nome))
+        {
+            validacaoNome = true;
+         
+        }
+        else if (string.IsNullOrEmpty(email))
+        {
+            validacaoEmail = true;
+        }
+        else if (dataNascimento.Year > (DateTime.Now.Date.Year) - 12 && dataNascimento.Year < (DateTime.Now.Date.Year) - 120)
+        {
+            validacaoData = true;
+        }
+        else
+        {
+            Aluno newAluno = new Aluno
+                {
+                    Matricula = gerarMatricula(),
+                    Nome = nome,
+                    DataNascimento = dataNascimento,
+                    Email = email
+                };
+
+            context.Alunos.Add(newAluno);
+
+            context.SaveChanges();
+
+            navigation.NavigateTo("/");
+        }
+    }
+
+    public int gerarMatricula()
+    {
+        Random random = new Random();
+        int matricula;
+        List<Aluno> alunos;
+
+        alunos = context.Alunos.ToList();
+        while (true)
+        {
+            matricula = random.Next(10000000, 99999999);
+
+            if(!alunos.Any((a) => a.Matricula == matricula))
+            {
+                break;
+            }
+        }
+
+        return matricula;
+    }
+
+}

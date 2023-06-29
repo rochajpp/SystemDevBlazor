@@ -1,0 +1,25 @@
+.main[b-xb1u0at93n] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.main form[b-xb1u0at93n] {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 4px 4px 8px black;
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+h1[b-xb1u0at93n] {
+    text-align: center;
+}
+
+input[b-xb1u0at93n] {
+    padding: 0.2rem 0.5rem;
+}

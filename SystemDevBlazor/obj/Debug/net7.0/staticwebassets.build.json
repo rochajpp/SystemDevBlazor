@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9jqvhbxq0bpIVq68Hy9eKKb2vS+7UWpSfEAuF3fkhQQ=",
+  "Hash": "kPVaNDbTHq0WB7cC0L/vMINjscbEeHqWeGvave67UuA=",
   "Source": "SystemDevBlazor",
   "BasePath": "_content/SystemDevBlazor",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\joaopaulo.rocha\\Documents\\SystemDevBlazor\\SystemDevBlazor\\wwwroot\\img\\background.jpg",
+      "SourceId": "SystemDevBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\joaopaulo.rocha\\Documents\\SystemDevBlazor\\SystemDevBlazor\\wwwroot\\",
+      "BasePath": "_content/SystemDevBlazor",
+      "RelativePath": "img/background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\background.jpg"
     }
   ]
 }

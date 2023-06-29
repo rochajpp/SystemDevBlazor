@@ -17,32 +17,30 @@
         <br />
 
 
-        @if (valM)
-        {
-            @if (valN)
-            {
-                <Alerta>
-                    <ContentSucess> Aluno validado com sucesso! </ContentSucess>
-                </Alerta>
-            }
-            else
-            {
-                <Alerta>
-                    <ContentDanger> Nome inválido </ContentDanger>
-                </Alerta>
-            }
-        }
-        else if (val)
-        {
-            <Alerta>
-                <ContentDanger> Matrícula Inválida! </ContentDanger>
-            </Alerta>
-        }
     </form>
 
-  
 
- 
+    @if (valM)
+    {
+        @if (valN)
+        {
+            <Alerta>
+                <ContentSucess> Aluno validado com sucesso! </ContentSucess>
+            </Alerta>
+        }
+        else
+        {
+            <Alerta>
+                <ContentDanger> Nome inválido! </ContentDanger>
+            </Alerta>
+        }
+    }
+    else if (val)
+    {
+        <Alerta>
+            <ContentDanger> Matrícula Inválida! </ContentDanger>
+        </Alerta>
+    }
 
 </div>
 

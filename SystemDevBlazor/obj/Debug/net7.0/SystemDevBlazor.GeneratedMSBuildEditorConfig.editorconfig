@@ -24,10 +24,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFsZXJ0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/joaopaulo.rocha/Documents/SystemDevBlazor/SystemDevBlazor/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/joaopaulo.rocha/Documents/SystemDevBlazor/SystemDevBlazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -35,6 +31,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/joaopaulo.rocha/Documents/SystemDevBlazor/SystemDevBlazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zezy89nk2a
+
+[C:/Users/joaopaulo.rocha/Documents/SystemDevBlazor/SystemDevBlazor/Pages/Registrar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-xb1u0at93n
 
 [C:/Users/joaopaulo.rocha/Documents/SystemDevBlazor/SystemDevBlazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
